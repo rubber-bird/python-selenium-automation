@@ -23,3 +23,5 @@ assert 'Dress' in driver.find_element(By.XPATH, "//div[contains(@class,'commerci
 assert 'Dress' in driver.find_element(By.XPATH, "//div[@class='g']").text
 
 driver.quit()
+
+# Hi, there!
