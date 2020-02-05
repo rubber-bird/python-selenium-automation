@@ -7,3 +7,6 @@ OTHER_ISSUES_WITH_SIGN_IN_LOCATOR = "//div[@class='a-section']//div[@class='a-ex
 CONDITIONS_OF_USE_LINK_LOCATOR = "//div[@class='a-section']/div[@id='legalTextRow']/a[text()='Conditions of Use']"
 PRIVACY_NOTICE_LINK_LOCATOR = "//div[@class='a-section']/div[@id='legalTextRow']/a[@id='ap-other-signin-issues-link']"
 CREATE_AMAZON_ACCOUNT_LOCATOR = "//div[@class='a-section']//span[@class='a-button a-button-span12 a-button-base']/span[@class='a-button-inner']/a[@id='createAccountSubmit']"
+
+
+
