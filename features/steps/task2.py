@@ -12,6 +12,8 @@ AMAZON_SEARCH_FIELD_LOCATOR = (By.CSS_SELECTOR, "input#twotabsearchtextbox.nav-i
 AMAZON_GO_SEARCH_BUTTON = (By.CSS_SELECTOR, "input.nav-input")
 AMAZON_SEARCH_SECOND_RESULT = (By.XPATH, "//div[@data-index='3']//a[@class='a-link-normal a-text-normal']")
 ADD_TO_CARD_BUTTON_LOCATOR = (By.CSS_SELECTOR, "input.a-button-input.attach-dss-atc")
+DELETE_BUTTON_LOCATOR = (By.XPATH, "//span[@class='a-size-small sc-action-delete']//input")
+NO_PROTECTION_BUTTON_LOCATOR = (By.CSS_SELECTOR, "span#attachSiNoCoverage.a-button")
 
 @given('Open Amazon page')
 def open_amazon_page(context):
@@ -73,7 +75,7 @@ def add_second_item(context):
 
 @then('No Protection Plan')
 def no_protection(context):
-    dis_protection_plan = context.driver.find_element(By.CSS_SELECTOR, "span#attachSiNoCoverage.a-button")
+    dis_protection_plan = context.driver.find_element(*NO_PROTECTION_BUTTON_LOCATOR)
     dis_protection_plan.click()
 
 @then('Click add to card')
@@ -84,6 +86,6 @@ def add_to_card(context):
 
 @then('Delete item')
 def delete_item(context):
-    delete_item_button = context.driver.find_element(By.XPATH, "//span[@class='a-size-small sc-action-delete']//input")
+    delete_item_button = context.driver.find_element(*DELETE_BUTTON_LOCATOR)
     delete_item_button.click()
     sleep(4)
