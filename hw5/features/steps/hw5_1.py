@@ -30,7 +30,7 @@ def check_desc(context):
 def select_desc(context, num_choice):
     elem = int(num_choice)
     elem += 1
-    context.processor_variation_list[1].click()
+    context.processor_variation_list[elem].click()
     sleep(3)
 
 @then('Add to Card')
