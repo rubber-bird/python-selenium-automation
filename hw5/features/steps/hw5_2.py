@@ -26,5 +26,5 @@ def click_search_button(context):
 
 @then('Count Best sellers')
 def count(context):
-    list_of_best_seller_elements = context.find_elements(*BEST_SELLER_BUTTON)
+    list_of_best_seller_elements = context.driver.find_elements(*BEST_SELLER_BUTTON)
     print(len(list_of_best_seller_elements))

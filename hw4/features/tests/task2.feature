@@ -1,4 +1,4 @@
-Feature:
+Feature: Make a request and count the results in page
   Scenario: Counting Results
     Given Open Amazon main page
     When Input History Books into amazon search field
